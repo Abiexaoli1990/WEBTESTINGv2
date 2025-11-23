@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ELON MUST TWEET FIRST</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -34,9 +34,12 @@
         /* HEADER (Default/Desktop: Tengah) */
         #main-header {
             position: fixed; top: 0; width: 100%; display: flex; align-items: center; 
-            justify-content: center; /* POSISI DEFAULT: TENGAH */
+            /* POSISI DEFAULT: TENGAH */
+            justify-content: center; 
+            /* END POSISI DEFAULT */
             padding: 10px 0; z-index: 100; 
             background-image: linear-gradient(90deg, #ff4500, #ffa500, #ffff00, #ffa500, #ff4500), linear-gradient(0deg, #ff69b4, #ffffff, #00ffff); 
+            /* box-shadow di sini diatur oleh @keyframes headerGlow */
             animation: fireWaveAnimation 10s linear infinite, headerBgRotate 2s linear infinite, headerGlow 4s infinite alternate; 
             background-size: 400% auto, 100% 100%; background-position: 0% center, 0% 0%; 
             font-family: sans-serif; font-size: 1.8rem; font-weight: bold; letter-spacing: 2px; 
@@ -54,7 +57,7 @@
         @keyframes headerBgRotate { 0% { background-image: linear-gradient(90deg, #ff4500, #ffa500, #ffff00, #ffa500, #ff4500), linear-gradient(0deg, #ff69b4, #ffffff, #00ffff); } 100% { background-image: linear-gradient(90deg, #ff4500, #ffa500, #ffff00, #ffa500, #ff4500), linear-gradient(360deg, #ff69b4, #ffffff, #00ffff); } }
         @keyframes headerGlow { 0% { box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 0 10px 2px #ff69b4; } 100% { box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 0 10px 2px #00ffff; } }
 
-        /* NAVIGASI ATAS */
+        /* NAVIGASI */
         .nav-container { position: fixed; top: 0; right: 0; z-index: 101; padding: 10px 15px; }
         .dropdown-toggle { background: none; border: none; color: white; font-size: 1.8rem; cursor: pointer; text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px #00bfff; transition: transform 0.2s; }
         .dropdown-toggle:hover { transform: scale(1.1); }
@@ -62,18 +65,18 @@
         .dropdown-menu.show { display: block; opacity: 1; transform: translateY(0); }
         .dropdown-menu li a { color: #fff; padding: 5px 15px; text-decoration: none; display: block; font-family: sans-serif; font-size: 0.95rem; transition: background-color 0.2s, color 0.2s; border-left: 1px solid transparent; }
         
-        /* Gradient Menu Items (TIDAK BERUBAH) */
+        /* Gradient Menu Items */
         .dropdown-menu li:nth-child(1) a { background-image: linear-gradient(45deg, #ff00cc, #3333ff); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; font-weight: bold; border-image: linear-gradient(90deg, #ff00cc, #3333ff) 1; border-left-width: 0.05px; border-style: solid; }
-        /* ... CSS menu lainnya ... */
         .dropdown-menu li:nth-child(2) a { background-image: linear-gradient(45deg, #00ff99, #ffff00); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; font-weight: bold; border-image: linear-gradient(90deg, #00ff99, #ffff00) 1; border-left-width: 0.05px; border-style: solid; }
         .dropdown-menu li:nth-child(3) a { background-image: linear-gradient(45deg, #ff69b4, #00bfff); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; font-weight: bold; border-image: linear-gradient(90deg, #ff69b4, #00bfff) 1; border-left-width: 0.05px; border-style: solid; }
         .dropdown-menu li:nth-child(4) a { background-image: linear-gradient(45deg, #ffd700, #ff4500); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; font-weight: bold; border-image: linear-gradient(90deg, #ffd700, #ff4500) 1; border-left-width: 0.05px; border-style: solid; }
+        
         .dropdown-menu li:nth-child(1) a:hover { background-image: linear-gradient(to right, #ff00cc22, #3333ff22); background-color: transparent; color: #fff; -webkit-text-fill-color: #fff; text-shadow: 0 0 5px rgba(255, 0, 204, 0.8); border-image: linear-gradient(90deg, #ff00cc, #3333ff) 1; border-left-width: 0.05px; }
         .dropdown-menu li:nth-child(2) a:hover { background-image: linear-gradient(to right, #00ff9922, #ffff0022); background-color: transparent; color: #fff; -webkit-text-fill-color: #fff; text-shadow: 0 0 5px rgba(0, 255, 153, 0.8); border-image: linear-gradient(90deg, #00ff99, #ffff00) 1; border-left-width: 0.05px; }
         .dropdown-menu li:nth-child(3) a:hover { background-image: linear-gradient(to right, #ff69b422, #00bfff22); background-color: transparent; color: #fff; -webkit-text-fill-color: #fff; text-shadow: 0 0 5px rgba(255, 105, 180, 0.8); border-image: linear-gradient(90deg, #ff69b4, #00bfff) 1; border-left-width: 0.05px; }
         .dropdown-menu li:nth-child(4) a:hover { background-image: linear-gradient(to right, #ffd70022, #ff450022); background-color: transparent; color: #fff; -webkit-text-fill-color: #fff; text-shadow: 0 0 5px rgba(255, 215, 0, 0.8); border-image: linear-gradient(90deg, #ffd700, #ff4500) 1; border-left-width: 0.05px; }
 
-        /* Canvas & Gallery (TIDAK BERUBAH) */
+        /* Canvas & Gallery (Default/Desktop) */
         #rainCanvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
         #snowCanvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; }
         .box { position: relative; width: 160px; height: 240px; transform-style: preserve-3d; max-width: 90vw; transition: transform 0.1s linear; z-index: 10; cursor: grab; margin-bottom: 30px; }
@@ -81,15 +84,17 @@
         @keyframes rotateBorderGradient { 0% { border-image: linear-gradient(0deg, #ff69b4, #ffffff, #00ffff) 1; } 100% { border-image: linear-gradient(360deg, #ff69b4, #ffffff, #00ffff) 1; } }
         .box span { 
             position: absolute; top: 0; left: 0; width: 100%; height: 100%; transform-origin: center; transform-style: preserve-3d; 
-            transform: rotateY(calc(var(--i) * 36deg)) translateZ(360px); 
+            /* MODIFIKASI: MENAMBAH JARAK (360px -> 450px) */
+            transform: rotateY(calc(var(--i) * 36deg)) translateZ(450px); 
             -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, rgba(4, 4, 4, 0.267)); z-index: 5; border-radius: 0; overflow: hidden; border: 4px solid transparent; animation: rotateBorderGradient 3s linear infinite; transition: transform 0.3s ease-out, box-shadow 0.2s ease-in-out, border 0.2s ease-in-out; 
         }
         .box span:hover, .box span:focus-within { 
-            transform: rotateY(calc(var(--i) * 36deg)) translateZ(360px) scale(1.1); animation-play-state: running; box-shadow: 0 0 20px rgba(0, 255, 255, 0.7); border: 4px solid transparent; border-image: linear-gradient(to right, #ff0000, #ffff00, #00ff00) 1; z-index: 999; 
+            /* MODIFIKASI: MENAMBAH JARAK (360px -> 450px) */
+            transform: rotateY(calc(var(--i) * 36deg)) translateZ(450px) scale(1.1); animation-play-state: running; box-shadow: 0 0 20px rgba(0, 255, 255, 0.7); border: 4px solid transparent; border-image: linear-gradient(to right, #ff0000, #ffff00, #00ff00) 1; z-index: 999; 
         }
         .box span img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; touch-action: pan-y; cursor: pointer; border-radius: 0; border: none; animation: none; transition: none; transform: scale(1); }
 
-        /* Copy Container (TIDAK BERUBAH) */
+        /* Copy Container (Default/Desktop) */
         #myInput { padding: 8px 15px; border-radius: 35px; border: 2px solid #00bfff; background: rgba(0, 0, 0, 0.5); color: #fff; font-family: sans-serif; outline: none; width: 100%; flex: 1; font-size: 1rem; text-align: center; min-width: 0; }
         .copy-btn { padding: 8px 20px; background: linear-gradient(90deg, #ff00cc, #3333ff); color: white; border: none; border-radius: 35px; cursor: pointer; font-weight: bold; font-family: sans-serif; box-shadow: 0 0 2px #ff00cc; transition: transform 0.2s, box-shadow 0.01s; white-space: nowrap; }
         .copy-btn:hover { transform: scale(1.05); box-shadow: 0 0 15px #3333ff; }
@@ -105,12 +110,14 @@
         .nav-button-bottom { 
             flex-grow: 1; padding: 9px 12px; text-decoration: none; border-radius: 10px; text-align: center; font-family: sans-serif; font-weight: bold;
             transition: transform 0.2s; font-size: 1.2rem; max-width: 110px;
+            
+            /* BACKGROUND TRANSPARAN */
             background: transparent; 
             border: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: none;
         }
         
-        /* GAYA UNTUK ICON (GRADIENT ANIMASI) - TIDAK BERUBAH */
+        /* GAYA UNTUK ICON (GRADIENT ANIMASI) */
         .nav-button-bottom i { 
             display: block; margin: 0; font-size: 1.5rem; 
             background-image: linear-gradient(90deg, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000);
@@ -125,7 +132,7 @@
         .nav-button-bottom:hover { transform: translateY(-4px) scale(1.1); background: rgba(255, 255, 255, 0.1); border-color: #00bfff; }
         .nav-button-bottom:hover i { filter: drop-shadow(0 0 10px #00bfff); }
 
-        /* --- MEDIA QUERY: VERSI MOBILE (Mode Portrait, Max-width 600px) --- (TIDAK BERUBAH) */
+        /* --- MEDIA QUERY: VERSI MOBILE (Mode Portrait, Max-width 600px) --- */
         @media screen and (max-width: 600px) {
             body { padding-top: 60px; padding-bottom: 90px; }
             #main-header { font-size: 20px; padding: 8px 0; }
@@ -136,90 +143,164 @@
             .dropdown-menu { right: 10px; min-width: 140px; }
             
             /* MODIFIKASI GALERI 3D UNTUK MOBILE PORTRAIT */
-            .box { width: 95px; height: 160px; margin-bottom: 30px; }
-            .box span { transform: rotateY(calc(var(--i) * 36deg)) translateZ(180px); border-radius: 0; }
-            .box span:hover, .box span:focus-within { transform: rotateY(calc(var(--i) * 36deg)) translateZ(180px) scale(1.1); box-shadow: 0 0 10px rgba(0, 255, 255, 0.7); border: 2px solid transparent; border-image: linear-gradient(to right, #ff0000, #ffff00, #00ff00) 1; z-index: 999; }
-            .box span img { width: 100%; height: 100%; }
+            .box { 
+                width: 95px; 
+                height: 160px; 
+                margin-bottom: 30px; 
+            }
+            .box span { 
+                /* MODIFIKASI: MENAMBAH JARAK (180px -> 250px) */
+                transform: rotateY(calc(var(--i) * 36deg)) translateZ(250px); 
+                border-radius: 0; 
+            }
+            .box span:hover, .box span:focus-within { 
+                /* MODIFIKASI: MENAMBAH JARAK (180px -> 250px) */
+                transform: rotateY(calc(var(--i) * 36deg)) translateZ(250px) scale(1.1); 
+                box-shadow: 0 0 10px rgba(0, 255, 255, 0.7); border: 2px solid transparent; border-image: linear-gradient(to right, #ff0000, #ffff00, #00ff00) 1; z-index: 999; 
+            }
+            .box span img { 
+                width: 100%; 
+                height: 100%; 
+            }
 
             /* Style khusus copy di mobile portrait */
-            .copy-container { margin-top: 60px; margin-bottom: -110px; flex-direction: column; width: 95%; }
-            #myInput { width: 100%; margin-bottom: 5px; font-size: 10px; }
-            .copy-btn { width: 100%; }
+            .copy-container {
+                margin-top: 60px; 
+                margin-bottom: -110px;
+                flex-direction: column;
+                width: 95%;
+            }
+            
+            #myInput { 
+                width: 3px 50px;
+                margin-bottom: 5px;
+                font-size: 10px; /* <--- UKURAN FONT 10PX KHUSUS MOBILE PORTRAIT */
+            }
+            
+            .copy-btn {
+                width: 3px 5px;
+            }
 
             .button-container { bottom:10px; }
-            .nav-button-bottom { font-size: 1rem; padding: 3px 5px; max-width: 60px; border: 1px solid rgba(255,255,255,0.2); }
+            .nav-button-bottom { 
+                font-size: 1rem; 
+                padding: 3px 5px; 
+                max-width: 60px; 
+                border: 1px solid rgba(255,255,255,0.2); 
+            }
             .nav-button-bottom i { font-size: 1.4rem; }
             .nav-button-bottom:hover, .nav-button-bottom:focus { border: 1px solid #00bfff; }
         }
 
-        /* --- MEDIA QUERY: MOBILE LANDSCAPE (Tablet Kecil & Ponsel) --- */
+        /* --- MEDIA QUERY BARU: MOBILE LANDSCAPE (Tablet Kecil & Ponsel) --- */
         @media screen and (orientation: landscape) and (max-width: 920px) {
+            /* Menggunakan kembali padding/header desktop */
             body { padding-top: 50px; padding-bottom: 100px; }
             
-            /* LOGO DI KIRI (TIDAK BERUBAH) */
+            /* >>> PERUBAHAN UTAMA: LOGO DI KIRI <<< */
             #main-header { 
+                /* Logo di Kiri (flex-start) */
                 justify-content: flex-start; 
+                /* Menambahkan padding kiri agar tidak terlalu mepet */
                 padding: 10px 20px; 
                 font-size: 1.8rem; 
+                /* === BARIS YANG DITAMBAHKAN UNTUK MENGHILANGKAN GARIS BORDER/GLOW === */
                 box-shadow: none !important;
+                /* ================================================================= */
             }
+            /* >>> AKHIR PERUBAHAN UTAMA <<< */
+
             #header-logo-link { margin-right: 10px; width: 70px; height: 70px; }
             #header-logo { width: 60px; height: 60px; }
             
-            /* Navigasi tetap di Kanan Atas (TIDAK BERUBAH) */
+            /* Memastikan Navigasi tetap di Kanan Atas */
             .nav-container { padding: 10px 15px; right: 0; }
             .dropdown-toggle { font-size: 1.8rem; }
             .dropdown-menu { right: 15px; min-width: 110px; } 
 
-            /* GALERI KHUSUS LANDSCAPE (TIDAK BERUBAH) */
-            .box { width: 100px; height: 130px; margin-bottom: 5px; }
-            .box span { transform: rotateY(calc(var(--i) * 36deg)) translateZ(155px); border: 2px solid transparent; }
-            .box span:hover, .box span:focus-within { transform: rotateY(calc(var(--i) * 36deg)) translateZ(155px) scale(1.4); box-shadow: 0 0 10px rgba(0, 255, 255, 0.7); border: 2px solid transparent; }
-            .box span img { width: 100px; height: 150px; object-fit: cover; }
+            /* Menerapkan gaya GALERI KHUSUS LANDSCAPE (UKURAN BARU: 100x150) */
+            .box { 
+                /* UKURAN BOX: 100px Lebar, 150px Tinggi */
+                width: 100px; 
+                height: 130px; 
+                margin-bottom: 5px; 
+            }
+            .box span { 
+                /* MODIFIKASI: MENAMBAH JARAK (155px -> 200px) */
+                transform: rotateY(calc(var(--i) * 36deg)) translateZ(200px); 
+                border: 2px solid transparent; /* Mengurangi tebal border */
+            }
+            .box span:hover, .box span:focus-within { 
+                /* MODIFIKASI: MENAMBAH JARAK (155px -> 200px) */
+                transform: rotateY(calc(var(--i) * 36deg)) translateZ(200px) scale(1.4); 
+                box-shadow: 0 0 10px rgba(0, 255, 255, 0.7); 
+                border: 2px solid transparent;
+            }
 
-            /* COPY CONTAINER LANDSCAPE (TIDAK BERUBAH) */
-            .copy-container { margin-top: 30px; margin-bottom: -70px; flex-direction: row; width: 95%; max-width: 500px; }
-            #myInput { font-size: 0.8rem; padding: 5px 10px; }
-            .copy-btn { width: auto; }
+            /* MENGUBAH UKURAN FOTO ROTASI JADI 100x150 */
+            .box span img { 
+               
+                width: 100px; /* Diubah menjadi 100px */
+                height: 150px; 
+                object-fit: cover; 
+            }
 
-            /* >>> MODIFIKASI: NAVIGASI BAWAH KEMBALI KE HORIZONTAL/TENGAH <<< */
+            /* Menerapkan kembali gaya COPY CONTAINER DESKTOP, tapi lebih kecil */
+            .copy-container {
+                margin-top: 35px; 
+                margin-bottom: -120px; 
+                flex-direction: row; 
+                width: 95%; 
+                max-width: 500px;
+            }
+            
+            #myInput { 
+                font-size: 0.8rem; 
+                padding: 5px 10px;
+            }
+            
+            .copy-btn {
+                width: auto; 
+            }
+
+            /* >>> PERBAIKAN UTAMA: NAVIGASI BAWAH KE KIRI BAWAH (VERTIKAL) <<< */
             .button-container { 
                 bottom: 0; 
-                left: 0; 
-                width: 100%; /* Lebar penuh */
+                left: 0; /* Menempel di kiri */
+                width: auto; /* Lebar sesuai konten */
                 height: auto;
-                padding: 10px; /* Padding kembali seperti default */
+                padding: 10px 0 10px 10px; /* Padding bawah dan kiri */
                 
-                /* Pengaturan Flexbox HORIZONTAL/TENGAH */
-                display: flex; 
-                flex-direction: row; /* Mengubah susunan menjadi baris (horizontal) */
-                justify-content: center; /* Kembali ke posisi tengah */
-                align-items: center; /* Rata vertikal di tengah */
-                gap: 10px; /* Jarak antar tombol seperti desktop */
+                /* Pengaturan Flexbox Vertikal */
+                display: flex; /* Memastikan flexbox aktif */
+                flex-direction: column; /* Mengubah susunan menjadi kolom (vertikal) */
+                justify-content: flex-end; /* Memulai penyusunan dari bawah */
+                align-items: flex-start; /* Mengatur item agar rata kiri */
+                gap: 5px; /* Mengurangi jarak antar tombol */
             }
             .nav-button-bottom { 
                 font-size: 1.2rem; 
                 padding: 9px 12px; 
-                max-width: 110px; /* Lebar maksimum seperti desktop */
-                margin-bottom: 0; /* Hapus margin bawah */
-                flex-grow: 1; /* Biarkan tombol membesar jika perlu (seperti default) */
+                max-width: 100px; /* Mengatur lebar maksimum setiap tombol */
+                margin-bottom: 5px; /* Tambahkan sedikit jarak di bawah setiap tombol */
+                flex-grow: 0; /* Menonaktifkan flex-grow */
                 border: 1px solid rgba(255, 255, 255, 0.2); 
             }
-            /* >>> AKHIR MODIFIKASI <<< */
-
             .nav-button-bottom i { font-size: 1.5rem; }
+            /* >>> AKHIR PERBAIKAN UTAMA <<< */
         }
     </style>
 </head>
 <body>
-<canvas id="rainCanvas"></canvas> 
+
+    <canvas id="rainCanvas"></canvas> 
     <canvas id="snowCanvas"></canvas>
     
     <div id="main-header">
         <a href="https://example.com" id="header-logo-link" target="_blank"> 
-            <img id="header-logo" src="https://img.freepik.com/vektor-premium/dragon-logo-format-design-very-cool-basic-vector-ink_803054-638.jpg" alt="Logo">
+            <img id="header-logo" src="logoelonmusktweetfirst.png" alt="Logo">
         </a>
-        ELON MUST TWEET FIRST
+        ELON MUSK TWETT FIRST
     </div>
     
     <div class="nav-container">
@@ -233,18 +314,17 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
-
-    <div class="box" id="gallery-box">
-        <span style="--i:1"><img src="https://png.pngtree.com/background/20250109/original/pngtree-cartoon-kids-walking-wallpaper-picture-image_15160714.jpg" alt="Gallery Image 1" tabindex="0"></span>
-        <span style="--i:2"><img src="https://img.freepik.com/foto-gratis/karakter-kartun-3d_23-2151021986.jpg?semt=ais_hybrid&w=740&q=80" alt="Gallery Image 2" tabindex="0"></span>
-        <span style="--i:3"><img src="https://i.pinimg.com/474x/21/35/f0/2135f0dd652c5487bc129558e9d3dada.jpg" alt="Gallery Image 3" tabindex="0"></span>
-        <span style="--i:4"><img src="https://azimages.org/wp-content/uploads/2024/10/Cute-Cartoon-Boy-DP15.jpg" alt="Gallery Image 4" tabindex="0"></span>
-        <span style="--i:5"><img src="https://sadgirldp.com/wp-content/uploads/Cartoon-Boy-DP-Images.jpeg" alt="Gallery Image 5" tabindex="0"></span>
-        <span style="--i:6"><img src="https://azimages.org/wp-content/uploads/2024/10/Cute-Cartoon-Boy-DP17.jpg" alt="Gallery Image 6" tabindex="0"></span>
-        <span style="--i:7"><img src="https://azimages.org/wp-content/uploads/2024/10/Cute-Cartoon-Boy-DP16.jpg" alt="Gallery Image 7" tabindex="0"></span>
-        <span style="--i:8"><img src="https://mewingemoji.com/wp-content/uploads/2024/07/cute-cartoon-dp15-573x1024.jpg" alt="Gallery Image 8" tabindex="0"></span>
-        <span style="--i:9"><img src="https://mewingemoji.com/wp-content/uploads/2024/07/cute-cartoon-dp.jpg" alt="Gallery Image 9" tabindex="0"></span>
-        <span style="--i:10"><img src="https://photosdp.com/wp-content/uploads/2024/04/Cartoon-Girl-Dp-PhotosDp.Com_24.jpg" alt="Gallery Image 10" tabindex="0"></span>
+<div class="box" id="gallery-box">
+        <span style="--i:1"><img src="elonmusk3d1.png" alt="Gallery Image 1" tabindex="0"></span>
+        <span style="--i:2"><img src="elonmusk3d2.png" alt="Gallery Image 2" tabindex="0"></span>
+        <span style="--i:3"><img src="elonmusk3d3.png" alt="Gallery Image 3" tabindex="0"></span>
+        <span style="--i:4"><img src="elonmusk3d4.png" alt="Gallery Image 4" tabindex="0"></span>
+        <span style="--i:5"><img src="elonmusk3d5.png" alt="Gallery Image 5" tabindex="0"></span>
+        <span style="--i:6"><img src="elonmusk3d6.png" alt="Gallery Image 6" tabindex="0"></span>
+        <span style="--i:7"><img src="elonmusk3d7.png" alt="Gallery Image 7" tabindex="0"></span>
+        <span style="--i:8"><img src="elonmusk3d8.png" alt="Gallery Image 8" tabindex="0"></span>
+        <span style="--i:9"><img src="elonmusk3d9.png" alt="Gallery Image 9" tabindex="0"></span>
+        <span style="--i:10"><img src="elonmusk3d10.jpg" alt="Gallery Image 10" tabindex="0"></span>
     </div>
 
     <div class="copy-container">
@@ -264,14 +344,8 @@
             var copyText = document.getElementById("myInput"); 
             copyText.select(); 
             copyText.setSelectionRange(0, 99999); 
-            if (navigator.clipboard) {
-                navigator.clipboard.writeText(copyText.value)
-                    .then(() => alert("Copied Address Sukses: " + copyText.value))
-                    .catch(err => console.error('Gagal menyalin teks: ', err));
-            } else {
-                 document.execCommand("copy");
-                 alert("Copied Address Sukses: " + copyText.value);
-            }
+            navigator.clipboard.writeText(copyText.value); 
+            alert("Copied Address Sukses: " + copyText.value); 
         }
 
         // --- LOGIKA DROPDOWN ---
@@ -350,6 +424,7 @@
 
         function resizeCanvas() { width = window.innerWidth; height = window.innerHeight; rainCanvas.width = width; rainCanvas.height = height; snowCanvas.width = width; snowCanvas.height = height; }
         
+        // Kelas untuk Tetesan Hujan
         class Drop {
             constructor() { this.reset(); this.z = Math.random() * 20 + 1; this.len = this.z; }
             reset() { this.x = Math.random() * width; this.y = Math.random() * height * 0.2 - 100; this.speedY = this.z * 0.4 + 5; this.alpha = 0.5 + Math.random() * 0.5; this.len = this.z * 2; this.vy = this.speedY; }
@@ -357,6 +432,7 @@
             draw() { rainCtx.beginPath(); rainCtx.strokeStyle = `rgba(255, 255, 255, ${this.alpha * 0.5})`; rainCtx.lineWidth = 1; rainCtx.moveTo(this.x, this.y); rainCtx.lineTo(this.x, this.y + this.len); rainCtx.stroke(); }
         }
         
+        // Kelas untuk Kepingan Salju
         class Snowflake {
             constructor() { this.reset(); this.radius = Math.random() * 2 + 0.5; this.alpha = 0.5 + Math.random() * 0.5; this.speedX = Math.random() * 1.5 - 0.75; this.angle = Math.random() * 2 * Math.PI; this.sinSpeed = Math.random() * 0.05 + 0.01; }
             reset() { this.x = Math.random() * width; this.y = Math.random() * height * 0.2 - 100; this.speedY = Math.random() * 1 + 0.5; }
